@@ -1,0 +1,15 @@
+<ion-view>
+    <ion-nav-title>Details</ion-nav-title>
+    <ion-content class="padding" ng-repeat="enterprise in enterpriseDetail">
+        <p ng-repeat="(key, val) in enterprise">{{ val.libelle }}</p>
+        <div class="list" ng-repeat="(key, entr) in enterprise">
+            <div class="item" ng-if="entr.secteur != null">{{ entr.secteur }}</div>
+            <div class="item" ng-if="entr.pays != null">{{ entr.pays }}</div>
+            <div class="item" ng-if="entr.ville != null">{{ entr.ville }}</div>
+            <div class="item" ng-if="entr.telephone != null">{{ entr.telephone }}</div>
+            <div class="item" ng-if="entr.fax != null">{{ entr.fax }}</div>
+            <div class="item" ng-if="entr.email != null">{{ entr.email }}</div>
+            <div class="item" ng-if="entr.siteweb != null">{{ entr.siteweb }}</div>
+        </div>
+    </ion-content>
+</ion-view>

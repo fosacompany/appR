@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>App reunion</title>
+    <link rel="manifest" href="manifest.json">
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+    <style type="text/css">
+    html,
+    body {
+        height: 100%;
+    }
+    html {
+        display: table;
+        margin: auto;
+    }
+    body {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .margin {
+      margin: 0 !important;
+    }
+    </style>
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/script.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  </head>
+  <body ng-app="enterpriseApp">
+    <ion-view view-title="Liste des entreprises">
+        <ion-content class="padding">
+          
+          <div class="list">
+              <label class="item item-input">
+                <input type="text" placeholder="Entreprise" id="libelle" name="libelle" ng-model="libelle">
+              </label>
+              <label class="item item-input">
+                <input type="text" placeholder="Pays" id="pays" name="pays" ng-model="pays">
+              </label>
+              <label class="item item-input">
+                <input type="text" placeholder="Adresse" id="adresse" name="adresse" ng-model="adresse">
+              </label>
+              <label class="item item-input">
+                <input type="text" placeholder="Ville" ng-model="ville">
+              </label>
+              <label class="item item-input">
+                <input type="text" placeholder="Bp" ng-model="bp">
+              </label>
+              <label class="item item-input">
+                <input type="text" placeholder="Secteur" ng-model="secteur">
+              </label>
+              <label class="item item-input">
+                <input type="text" placeholder="Telephone" ng-model="telephone">
+              </label>
+              <label class="item item-input">
+                <input type="text" placeholder="Fax" ng-model="fax">
+              </label>
+              <label class="item item-input">
+                <input type="text" placeholder="Email" ng-model="email">
+              </label>
+              <label class="item item-input">
+                <input type="text" placeholder="Site web" ng-model="siteweb">
+              </label>
+          </div>
+          <button onclick="senddata();" id="valider" class="button button-full button-positive">Valider</button>
+        </ion-content>
+    </ion-view>
+
+  </body>
+</html>

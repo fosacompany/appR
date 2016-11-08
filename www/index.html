@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>App reunion</title>
+    <link rel="manifest" href="manifest.json">
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/script.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  </head>
+  <body ng-app="enterpriseApp">
+    <ion-view view-title="Liste des entreprises">
+        <ion-content class="padding">
+          <div id="login-page" class="row">
+            <div class="col s12 z-depth-6 card-panel">
+              <form class="login-form">
+                <div class="row">
+                  <div class="input-field col s12 center">
+                    <img src="img/icon.png" alt="" class="responsive-img valign profile-image-login">
+                  </div>
+                </div>
+                <div class="row margin">
+                  <div class="input-field col s12">
+                    <i class="mdi-action-assignment-late prefix"></i>
+                    <input id="libelle" name="libelle" type="text" class="validate">
+                    <label for="entreprise" class="center-align">Entreprise</label>
+                  </div>
+                </div>
+                <div class="row margin">
+                  <div class="input-field col s12">
+                    <i class="mdi-action-assignment-late prefix"></i>
+                    <input id="pays" name="pays" type="text" class="validate">
+                    <label for="pays" class="center-align">Pays</label>
+                  </div>
+                </div>
+                <div class="row margin">
+                  <div class="input-field col s12">
+                    <i class="mdi-action-bookmark prefix"></i>
+                    <input id="adresse" name="adresse" type="text" class="validate">
+                    <label for="adresse" class="center-align">Adresse</label>
+                  </div>
+                </div>
+                <div class="row margin">
+                  <div class="input-field col s12">
+                    <i class="mdi-action-language prefix"></i>
+                    <input id="ville" name="ville" type="text" class="validate">
+                    <label for="ville" class="center-align">Ville</label>
+                  </div>
+                </div>
+                <div class="row margin">
+                  <div class="input-field col s12">
+                    <i class="mdi-action-language prefix"></i>
+                    <input id="bp" name="bp" type="text" class="validate">
+                    <label for="bp" class="center-align">Bp</label>
+                  </div>
+                </div>
+                <div class="row margin">
+                  <div class="input-field col s12">
+                    <i class="mdi-action-input prefix"></i>
+                    <input id="secteur" name="secteur" type="text" class="validate">
+                    <label for="secteur" class="center-align">Secteur</label>
+                  </div>
+                </div>
+                <div class="row margin">
+                  <div class="input-field col s12">
+                    <i class="mdi-action-perm-phone-msg prefix"></i>
+                    <input id="telephone" name="telephone" type="text" class="validate">
+                    <label for="telephone" class="center-align">Téléphone</label>
+                  </div>
+                </div>
+                <div class="row margin">
+                  <div class="input-field col s12">
+                    <i class="mdi-action-perm-phone-msg prefix"></i>
+                    <input id="fax" name="fax" type="text" class="validate">
+                    <label for="fax" class="center-align">Fax</label>
+                  </div>
+                </div>
+                <div class="row margin">
+                  <div class="input-field col s12">
+                    <i class="mdi-communication-email prefix"></i>
+                    <input id="email" name="email" type="email" class="validate">
+                    <label for="email" class="center-align">Email</label>
+                  </div>
+                </div>
+                <div class="row margin">
+                  <div class="input-field col s12">
+                    <i class="mdi-action-lock-outline prefix"></i>
+                    <input id="siteweb" name="siteweb" type="text" class="validate">
+                    <label for="siteweb" class="center-align">Site web</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <button onclick="senddata();" id="valider" class="btn waves-effect waves-light col s12">Valider</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </ion-content>
+      </ion-view>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
+<script>
+function openPageListe(){
+ window.open('templates/list.html');
+}
+</script>
+</body>
+</html>
